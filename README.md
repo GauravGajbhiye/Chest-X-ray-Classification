@@ -10,9 +10,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-   
+   <a href="">
     <img src="images/x-ray.jpg" alt="Logo" width="100%" height="100%">
-
+   </a>
 
   <h1 align="center">Chest X-ray Classification</h1>
 
@@ -51,7 +51,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[]("images/output1.jpg")
+![](images/output1.jpg)
 
 Chest X-ray Classification is based on computer vision algorithms. It analyses the x-rays uploaded by the user and classifies them into appropriate disease. Diseases which it can predict are Edema, Hernia, Mass, Pneumonia, Infiltration, Fibrosis and many more.
 
@@ -84,7 +84,8 @@ This was build using following frameworks, libraries and softwares.
 ---
 ## Class Imbalance Problem
 One of the challenges with working with medical diagnostic datasets is the large class imbalance present in such datasets. Let's plot the frequency of each of the labels in our dataset:
-[]("images/frequency.png")
+
+![](images/frequency.png)
 
 We can see from this plot that the prevalance of positive cases varies significantly across the different pathologies. (These trends mirror the ones in the full dataset as well.) 
 * The `Hernia` pathology has the greatest imbalance with the proportion of positive training cases being about 0.2%. 
@@ -95,7 +96,8 @@ Ideally, we would train our model using an evenly balanced dataset so that the p
 If we use a normal cross-entropy loss function with a highly unbalanced dataset, as we are seeing here, then the algorithm will be incentivized to prioritize the majority class (i.e negative in our case), since it contributes more to the loss. 
 
 Let's visualize these two contribution ratios next to each other for each of the pathologies:
-[]("images/class_imbalance_problem.png")
+
+![](images/class_imbalance_problem.png)
 
 As we see in the above plot, the contributions of positive cases is significantly lower than that of the negative ones. However, we want the contributions to be equal. One way of doing this is by multiplying each example from each class by a class-specific weight factor, $w_{pos}$ and $w_{neg}$, so that the overall contribution of each class is the same. 
 
@@ -110,11 +112,13 @@ $$w_{neg} = freq_{pos}$$
 
 This way, we will be balancing the contribution of positive and negative labels.
 Let's verify this by graphing the two contributions next to each other again:
-[]("images/class_imbalance_solved.png")
+
+![](images/class_imbalance_solved.png)
 
 ---
 ## ROC Curve
-[]("images/roc.jpg")
+
+![](images/roc.jpg)
 
 ---
 
